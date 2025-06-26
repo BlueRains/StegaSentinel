@@ -4,14 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-tensorflow = "==2.16.1"
-python-magic = "*"
-dotenv = "*"
 attrs = "*"
+
+[connector]
+dotenv = "*"
+
+[analyser]
+python-magic = "*"
 
 [dev-packages]
 ruff = "*"
-pdoc = "*"
+pdoc = "~=15.0"
 
 [requires]
-python_version = "3.12"
+python_version = "3.11"
