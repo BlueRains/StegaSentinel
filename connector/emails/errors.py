@@ -12,6 +12,6 @@ class NoConnectionError(Exception):
 class CommandFailedError(Exception):
     """Raised when a command sent to the email server fails."""
 
-    def __init__(self, command:str, response:str):
+    def __init__(self, command: str, response: str):
         message = f"Command '{command}' failed with response: {response}"
         super().__init__(message)

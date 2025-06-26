@@ -9,6 +9,6 @@ class PredictingModel(Protocol):
     It must implement the `is_steganography` method which takes an attachment in bytes.
     """  # noqa: E501
 
-    def is_steganography(self, attachment: bytes) -> bool:
+    def is_stego_object(self, attachment: bytes) -> bool:  # noqa: ARG002
         """Check if an attachment contains steganography."""
         assert NotImplementedError("This method should be implemented by subclasses")

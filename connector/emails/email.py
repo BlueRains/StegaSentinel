@@ -5,11 +5,14 @@ Different implementations should inherit from this class.
 Additionally, it defines an Attachment class to represent email attachments.
 """
 
-from typing import Protocol
+from io import BytesIO
+from typing import Any, Protocol
 
 from attrs import define, field
 
 UNIMPLEMENTED_SUBCLASS = "This method should be implemented by subclasses"
+
+EmailId = Any
 
 
 @define
@@ -22,7 +25,7 @@ class Attachment:
     """
 
     filename: str = field()
-    content: bytes = field()
+    content: BytesIO = field()
 
 
 class EmailHandler(Protocol):
@@ -40,7 +43,7 @@ class EmailHandler(Protocol):
         """
         raise NotImplementedError(UNIMPLEMENTED_SUBCLASS)
 
-    def get_new_emails(self):
+    def get_new_emails(self) -> list[EmailId]:
         """Get new emails from the email server.
 
         Returns:
@@ -48,7 +51,7 @@ class EmailHandler(Protocol):
         """
         raise NotImplementedError(UNIMPLEMENTED_SUBCLASS)
 
-    def get_attachments(self, email_id) -> list[Attachment]:
+    def get_attachments(self, email_id: EmailId) -> list[Attachment]:
         """Get attachments from an email.
 
         Args:
@@ -59,7 +62,7 @@ class EmailHandler(Protocol):
         """
         raise NotImplementedError(UNIMPLEMENTED_SUBCLASS)
 
-    def quarantine_email(self, email_id):
+    def quarantine_email(self, email_id: EmailId):
         """
         Quarantine an email by its ID.
 
@@ -68,7 +71,7 @@ class EmailHandler(Protocol):
         """
         raise NotImplementedError(UNIMPLEMENTED_SUBCLASS)
 
-    def accept_email(self, email_id):
+    def accept_email(self, email_id: EmailId):
         """
         Indicate that an email is safe and can be accepted.
 
