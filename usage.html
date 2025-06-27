@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Usage &#8212; StegaSentinel 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API" href="api.html" />
+    <link rel="prev" title="StegaSentinel documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation">
+<span id="id1"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>To use StegaSentinel, Docker must be installed.</p>
+<p>Additionally, a ‘.env’ file must be created.
+This file needs to have at least the following variables:</p>
+<dl class="envvar">
+<dt id="envvar-NETWORK">
+<code class="sig-name descname">NETWORK</code><a class="headerlink" href="#envvar-NETWORK" title="Permalink to this definition">¶</a></dt>
+<dd><p>The network for the docker containers to communicate with. Default: localhost</p>
+</dd></dl>
+
+<dl class="envvar">
+<dt id="envvar-COMM_PORT">
+<code class="sig-name descname">COMM_PORT</code><a class="headerlink" href="#envvar-COMM_PORT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port for the docker containers to communicate with.</p>
+</dd></dl>
+
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(.venv)</span> <span class="gp">$</span> docker compose up
+</pre></div>
+</div>
+<p>It will automaticall start up both the connector and the analyser in different docker containers.</p>
+</div>
+<div class="section" id="email">
+<h2>Email<a class="headerlink" href="#email" title="Permalink to this headline">¶</a></h2>
+<p>For different email integrations, different libraries etc. can be needed.</p>
+<div class="section" id="imap">
+<h3>IMAP<a class="headerlink" href="#imap" title="Permalink to this headline">¶</a></h3>
+<p>For IMAP, the following environment variables are needed:</p>
+<dl class="envvar">
+<dt id="envvar-IMAP_HOST">
+<code class="sig-name descname">IMAP_HOST</code><a class="headerlink" href="#envvar-IMAP_HOST" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IMAP server.</p>
+</dd></dl>
+
+<dl class="envvar">
+<dt id="envvar-IMAP_PORT">
+<code class="sig-name descname">IMAP_PORT</code><a class="headerlink" href="#envvar-IMAP_PORT" title="Permalink to this definition">¶</a></dt>
+<dd><p>The port of the IMAP server</p>
+</dd></dl>
+
+<dl class="envvar">
+<dt id="envvar-IMAP_USER">
+<code class="sig-name descname">IMAP_USER</code><a class="headerlink" href="#envvar-IMAP_USER" title="Permalink to this definition">¶</a></dt>
+<dd><p>The email / username of the user.</p>
+</dd></dl>
+
+<dl class="envvar">
+<dt id="envvar-IMAP_PASS">
+<code class="sig-name descname">IMAP_PASS</code><a class="headerlink" href="#envvar-IMAP_PASS" title="Permalink to this definition">¶</a></dt>
+<dd><p>The password needed to connect.</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">StegaSentinel</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#email">Email</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">StegaSentinel documentation</a></li>
+      <li>Next: <a href="api.html" title="next chapter">API</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;%Y, Lu Schoevaars.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/usage.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
