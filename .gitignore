@@ -70,6 +70,9 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+# Automatically generated docs.
+docs/source/analyser
+docs/source/connector
 
 # PyBuilder
 .pybuilder/
